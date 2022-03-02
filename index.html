@@ -9,10 +9,11 @@
         var estado_tablero = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         var jugador = 1;
         function dibujar(){
-            for (i= 0; i < 9; i++)
+            for (i= 0; i < 9; i++){
                 if (estado_tablero[i] == 0) document.getElementById("celda" + i).style = "background-color: white";
                 if (estado_tablero[i] == 1) document.getElementById("celda" + i).style = "background-color: red";
                 if (estado_tablero[i] == 2) document.getElementById("celda" + i).style = "background-color: blue";
+            }
         }
         function fcelda(celda) {
             if (estado_tablero[celda] == 0){
@@ -33,14 +34,14 @@
             for (i=0; i < 9; i++){
                 if (estado_tablero[i] == 0) numceldasvacias = numceldasvacias + 1;
             }
-            if (estado_tablero[0] == estado_tablero[1] && estado_tablero[1] == estado_tablero[2] && estado_tablero[0] !=0) return estado_tablero[0];
-            if (estado_tablero[3] == estado_tablero[4] && estado_tablero[4] == estado_tablero[5] && estado_tablero[3] !=0) return estado_tablero[3];
-            if (estado_tablero[6] == estado_tablero[7] && estado_tablero[7] == estado_tablero[8] && estado_tablero[6] !=0) return estado_tablero[6];
-            if (estado_tablero[0] == estado_tablero[3] && estado_tablero[3] == estado_tablero[6] && estado_tablero[0] !=0) return estado_tablero[0];
-            if (estado_tablero[1] == estado_tablero[4] && estado_tablero[4] == estado_tablero[7] && estado_tablero[1] !=0) return estado_tablero[1];
-            if (estado_tablero[2] == estado_tablero[5] && estado_tablero[5] == estado_tablero[8] && estado_tablero[2] !=0) return estado_tablero[2];
-            if (estado_tablero[0] == estado_tablero[4] && estado_tablero[4] == estado_tablero[8] && estado_tablero[0] !=0) return estado_tablero[0];
-            if (estado_tablero[2] == estado_tablero[4] && estado_tablero[4] == estado_tablero[6] && estado_tablero[2] !=0) return estado_tablero[2];
+            if ((estado_tablero[0] == estado_tablero[1]) && (estado_tablero[1] == estado_tablero[2]) && estado_tablero[0] !=0) return estado_tablero[0];
+            if ((estado_tablero[3] == estado_tablero[4]) && (estado_tablero[4] == estado_tablero[5]) && estado_tablero[3] !=0) return estado_tablero[3];
+            if ((estado_tablero[6] == estado_tablero[7]) && (estado_tablero[7] == estado_tablero[8]) && estado_tablero[6] !=0) return estado_tablero[6];
+            if ((estado_tablero[0] == estado_tablero[3]) && (estado_tablero[3] == estado_tablero[6]) && estado_tablero[0] !=0) return estado_tablero[0];
+            if ((estado_tablero[1] == estado_tablero[4]) && (estado_tablero[4] == (estado_tablero[7]) && estado_tablero[1]) !=0) return estado_tablero[1];
+            if ((estado_tablero[2] == estado_tablero[5]) && (estado_tablero[5] == (estado_tablero[8]) && estado_tablero[2]) !=0) return estado_tablero[2];
+            if ((estado_tablero[0] == estado_tablero[4]) && (estado_tablero[4] == estado_tablero[8]) && estado_tablero[0] !=0) return estado_tablero[0];
+            if ((estado_tablero[2] == estado_tablero[4]) && (estado_tablero[4] == estado_tablero[6]) && estado_tablero[2] !=0) return estado_tablero[2];
 
             if (numceldasvacias > 0) {
                 return 0;
